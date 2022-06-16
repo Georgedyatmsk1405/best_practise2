@@ -1,0 +1,66 @@
+from collections import deque
+from typing import Optional
+
+
+Graph = Dict[str, Dict[str, float]]
+
+
+def add_edge(graph: Graph, a: str, b: str, weight: float):
+    if a not in graph:
+        graph[a] = {b: weight}
+    else:
+        graph[a][b] = weight
+
+
+def fill_graph() -> Graph:
+    edges = int(input("Input edges quantity: "))
+
+    for i in range(edges):
+        a, b, weight = input("Input vertex A vertex B and weight(float):").split()
+        weight = float(weight)
+        add_edge(graph, a, b, weight)
+        add_edge(graph, b, a, weight)
+    return graph
+
+
+def repair_path(
+        start: str, finish: str, distances: Dict[str, float], graph: Graph
+    ) -> List[str]:
+    path = [finish]
+    while finish != start:
+        for neightbour, weight in graph[finish].items():
+            if distances[neightbour] == distances[finish] - weight:
+                path.append(neightbour)
+                finish = neightbour
+    return path
+
+
+def dijkstra(graph: Graph, start: str) -> Dict[str, float]:
+    queue = deque()
+    shortest_distances = {}
+    shortest_distances[start] = 0
+    queue.append(start)
+    while queue:
+        vertex = queue.popleft()
+        for neightbour in graph[vertex]:
+            edge_weight = graph[vertex][neightbour]
+            parent_weight = shortest_distances[vertex]
+            existing_weight = shortest_distances.get(neightbour, float('inf'))
+            
+            if existing_weight == float('inf') or \
+                parent_weight + edge_weight < existing_weight:
+                shortest_distances[neightbour] = parent_weight + edge_weight
+                queue.append(neightbour)
+            
+    return shortest_distances
+
+graph = {}
+graph = fill_graph()
+
+start = input("Input start vertex: ")
+finish = input("Input finish vertex: ")
+shortest_distances = dijkstra(graph, start)
+shortest_path = repair_path(start, finish, shortest_distances, graph)
+
+print(shortest_distances)
+print(shortest_path)

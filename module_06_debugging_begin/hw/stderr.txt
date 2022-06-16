@@ -1,0 +1,37 @@
+INFO:password_checker:Вы пытаетесь аутентифицироваться в Skillbox
+INFO:password_checker:У вас есть 3 попыток
+DEBUG:password_checker:Начало input_and_check_password
+INFO:password_checker:Вы пытаетесь аутентифицироваться в Skillbox
+INFO:password_checker:У вас есть 3 попыток
+DEBUG:password_checker:Начало input_and_check_password
+WARNING:password_checker:Вы ввели пустой пароль.
+DEBUG:password_checker:Начало input_and_check_password
+WARNING:password_checker:Вы ввели пустой пароль.
+DEBUG:password_checker:Начало input_and_check_password
+ERROR:password_checker:Пользователь трижды ввёл не правильный пароль!
+05-Mar-22 17:07:07 - INFO - Вы пытаетесь аутентифицироваться в Skillbox
+05-Mar-22 17:07:07 - INFO - У вас есть 3 попыток
+05-Mar-22 17:07:07 - DEBUG - Начало input_and_check_password
+05-Mar-22 17:07:09 - WARNING - Вы ввели пустой пароль.
+05-Mar-22 17:07:09 - DEBUG - Начало input_and_check_password
+05-Mar-22 17:07:10 - DEBUG - Начало input_and_check_password
+05-Mar-22 17:07:10 - WARNING - Вы ввели пустой пароль.
+05-Mar-22 17:07:10 - ERROR - Пользователь трижды ввёл не правильный пароль!
+17:07:44 - INFO - Вы пытаетесь аутентифицироваться в Skillbox
+17:07:44 - INFO - У вас есть 3 попыток
+17:07:44 - DEBUG - Начало input_and_check_password
+17:07:45 - WARNING - Вы ввели пустой пароль.
+17:07:45 - DEBUG - Начало input_and_check_password
+17:07:45 - WARNING - Вы ввели пустой пароль.
+17:07:45 - DEBUG - Начало input_and_check_password
+17:07:45 - WARNING - Вы ввели пустой пароль.
+17:07:45 - ERROR - Пользователь трижды ввёл не правильный пароль!
+11:20:51 - INFO - Вы пытаетесь аутентифицироваться в Skillbox
+11:20:51 - INFO - У вас есть 3 попыток
+11:20:51 - DEBUG - Начало input_and_check_password
+19:32:18 - INFO - Вы пытаетесь аутентифицироваться в Skillbox
+19:32:18 - INFO - У вас есть 3 попыток
+19:32:18 - DEBUG - Начало input_and_check_password
+19:32:32 - INFO - Вы пытаетесь аутентифицироваться в Skillbox
+19:32:32 - INFO - У вас есть 3 попыток
+19:32:32 - DEBUG - Начало input_and_check_password
